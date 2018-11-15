@@ -608,6 +608,9 @@ defmodule Tortoise.Connection do
 
       {:error, :closed} ->
         {:error, :server_closed_connection}
+
+      {:error, :timeout} ->
+        {:error, :server_closed_connection}
     end
   end
 
